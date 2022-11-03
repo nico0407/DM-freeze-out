@@ -1,1 +1,1 @@
-# DM-freeze-out
+# DM freeze-out
