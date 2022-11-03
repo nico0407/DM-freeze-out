@@ -1,1 +1,1 @@
-# DM freeze-out
+# Dark Matter freeze-out
