@@ -1,1 +1,5 @@
+Rmember to update 'quantity' on each iDM relic computation, and to get rid of m1 and m2 multiplying factor in the differential equation
 
+quantity=np.sqrt(np.pi*(Mp**2)/45)*m2
+
+iDM freeze-out-integration_unpolarized is the most updated one, and the most complete
