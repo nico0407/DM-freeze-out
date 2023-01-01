@@ -8,3 +8,5 @@ Things I still need to do:
 - Understand which kind of result physically am I getting.
 
 Then vary the parameter space and look for possible pheno.
+
+Copy the iDM.....unpolarized file and change masses of DM particles. Change the coannihilation cross section, need to insert the hadrons production in the final state. Same for the scalar coannihilation. Integrate again.
