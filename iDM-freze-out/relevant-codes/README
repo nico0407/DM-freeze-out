@@ -11,4 +11,7 @@ BUT
 ## IN OUR MODEL PROBABLY THERE IS A FACTOR MORE... WHEN EXPANDING THE INTERACTION TERMS THERE IA A PREFACTOR OF COS (BETA), COS (W) AND TAN (CHI).... REMEBER TO SQUARE THEM
 ## THOSE SHOUD BE ADDED IN THE INTERACTION TERM? 
 IF d_V^f is without them is something prop to 10E-7
-IF d_V^f is with them is something prop to 10E-10
+IF d_V^f is with them is something prop to 10E-13!!!
+
+In this latter case the value is too low to be possible. 
+epsilon^2=1E-6 and gives me the same result as Gordan.. look at the previous folder to iDM- integratuion...unpolarized.ipytm (Always with the decay and scattering issue enyway (1/H and Y_f^(0) respectively)...)
