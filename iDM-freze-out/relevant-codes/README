@@ -3,7 +3,7 @@
 
 ##iDM_yes_hadrons_no_scalar_modified.ipynb ---->  INSTEAD THIS DIFFERENT FROM THE NON MODIFIED ONE BECAUSE I HAVE NOTICE THAT THE BOLTZMANN EQUATION IS INCORRECT WRITTEN DOWN IN THAT WAY. THE DECAY THERMAL AVERAGE CROSS SECTION HAS JUST (1/H) INSTEAD OF (S/H) AST THE OTHERS, AND MOREOVER THAT DEPENDS ON THE TEMPERATURE, SO I HAVE CHANGED IT. MOREOVER THERE IS ALSO TO MODIFY THE SCATTERING PART. IS THE Y_f^(0) THE EQUILIBRIUM DISTRIBUTION OF THE EELCTRON? IF SO I NEED TO MODIFY IT!!!!!!
 
-##iDM_yes_hadrons_no_scalar_modified_electron_equilibrium.ipynb -----> Should be the correct one finally with also the equilibrium function of the electron
+##iDM_yes_hadrons_no_scalar_modified_electron_equilibrium.ipynb -----> Should be the correct one finally with also the equilibrium function of the electron. BUT THE RESULT IS TOO BAD.
 
 
 BUT
