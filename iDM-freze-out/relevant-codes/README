@@ -97,6 +97,148 @@ epsilon^2=1E-6 and gives me the same result as Gordan.. look at the previous fol
             
             
             
+            (*  External parameters *)
+            
+            
+
+  gX == {                                                                          (*   >>>>>   HERE!   <<<<<   *)                                                                         
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    InteractionOrder -> {QNP,1},
+    Description      -> "gX"
+  },
+  QX == {                                                                         
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "QX"
+  },                                                            (* eliminated the schi because is an internal parameter depending on epsilon  *)
+
+
+  epsilondark == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "epsilon_dark"
+  },                                      (*   >>>>>   HERE! Nico (Probably we should go back to Gordan's model)   <<<<<   *)
+
+
+
+  vevscal == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "vev_scalar"
+  },                                                (*   >>>>>   HERE! Nico   <<<<<   *)
+ vevhiggs == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 246,
+    Description      -> "vev_higgs"
+  },                                                (*   >>>>>   HERE! Nico   <<<<<   *)
+ lambdaphih == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "Lambda_phi_h"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+
+
+ U_nu3HNL4 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_nu3HNL4"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_nu3HNL5 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_nu3HNL5"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_nu3HNL6 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_nu3HNL6"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL4HNL4 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL4HNL4"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL4HNL5 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL4HNL5"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL4HNL6 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL4HNL6"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL5HNL4 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL5HNL4"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL5HNL5 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL5HNL5"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL5HNL6 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL5HNL6"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL6HNL4 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL6HNL4"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL6HNL5 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL6HNL5"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_HNL6HNL6 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_HNL6HNL6"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_DNHNL4 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_DNHNL4"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+ U_DNHNL5 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_DNHNL5"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *) 
+ U_DNHNL6 == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "U_DNHNL6"
+  },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
+            
+            
+            
+            
             
             
             
