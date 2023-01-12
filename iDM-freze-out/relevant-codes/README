@@ -15,3 +15,75 @@ IF d_V^f is with them is something prop to 10E-13!!!
 
 In this latter case the value is too low to be possible. 
 epsilon^2=1E-6 and gives me the same result as Gordan.. look at the previous folder to iDM- integratuion...unpolarized.ipytm (Always with the decay and scattering issue enyway (1/H and Y_f^(0) respectively)...)
+
+
+
+
+
+
+
+(* ******************************** *)
+(* ****      NP Lagrangian     **** *)
+(* ******************************** *)
+
+
+ LNP0  := Block[{mu,nu},
+                ExpandIndices[
+
+           - 1/4 FS[X0,mu,nu] FS[X0,mu,nu] + 1/2 mX0^2 X0[mu] X0[mu]
+           + I/2 X1bar.Ga[mu].del[X1,mu]   -     mX1/2 X1bar.X1
+           + I/2 X2bar.Ga[mu].del[X2,mu]   -     mX2/2 X2bar.X2
+           + I/2 DNbar.Ga[mu].del[DN,mu]   -     mDN/2 DNbar.DN           (*  DN have a covariant derivative, need to change something? *)
+           + I/2 HNL4bar.Ga[mu].del[HNL4,mu]   -     mHNL4/2 HNL4bar.HNL4         (*  HNL have a simple derivative  *)
+           + I/2 HNL5bar.Ga[mu].del[HNL5,mu]   -     mHNL5/2 HNL5bar.HNL5         (*  HNL have a simple derivative  *)
+           + I/2 HNL6bar.Ga[mu].del[HNL6,mu]   -     mHNL6/2 HNL6bar.HNL6         (*  HNL have a simple derivative  *)
+           + 1/2 del[S0,mu]   del[S0,mu]   - 1/2 mS0^2 S0^2
+
+           + (mS0^2/vevscal^2) (S0^2)^2 + lambdaphih S0^2 H^2
+
+                              ]
+                ];
+
+
+ LNP1  := Block[{mu,sp1,sp2,sp3},
+                ExpandIndices[
+      
+           - e0 epsilondark ebar[sp1] Ga[mu,sp1,sp2] e[sp2] X0[mu]
+           - e0 epsilondark mubar[sp1] Ga[mu,sp1,sp2] mu[sp2] X0[mu]
+
+           + I gX QX X2bar.Ga[mu].X1  ( (cbeta/cchi) X0[mu] + ((Sqrt[1-cbeta^2])/cchi) Z[mu] )   
+           (* iDM vector interaction, I have added the Z mediated interaction as well *)
+
+           + Ychi (S0 cos(thetascalar) - H sin(thetascalar)) ( X2bar[sp1] X2[sp1] + X1bar[sp1] X1[sp1])    (* iDM scalar interaction *)
+
+
+
+
+
+           - ( HNL4bar[sp1] Ga[mu,sp1,sp2] (c_44 Z[mu]+ d_44 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL4[sp3] ) + 
+           ( HNL4bar[sp1] Ga[mu,sp1,sp2] (c_45 Z[mu]+ d_45 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL5[sp3] ) + 
+           ( HNL4bar[sp1] Ga[mu,sp1,sp2] (c_46 Z[mu]+ d_46 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL6[sp3] ) + 
+           ( HNL5bar[sp1] Ga[mu,sp1,sp2] (c_54 Z[mu]+ d_54 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL4[sp3] ) + 
+           ( HNL5bar[sp1] Ga[mu,sp1,sp2] (c_55 Z[mu]+ d_55 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL5[sp3] ) + 
+           ( HNL5bar[sp1] Ga[mu,sp1,sp2] (c_56 Z[mu]+ d_56 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL6[sp3] ) + 
+           ( HNL6bar[sp1] Ga[mu,sp1,sp2] (c_64 Z[mu]+ d_64 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL4[sp3] ) + 
+           ( HNL6bar[sp1] Ga[mu,sp1,sp2] (c_65 Z[mu]+ d_65 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL5[sp3] ) + 
+           ( HNL6bar[sp1] Ga[mu,sp1,sp2] (c_66 Z[mu]+ d_66 X0[mu]) ((1-Ga[5,sp2,sp3])/2) HNL6[sp3] )     
+           (* Neutrino vectorial interaction under L-R symmetry *)
+
+
+
+            - ( (HNL4bar[sp1] HNL4[sp2] Deltah_44) + (HNL4bar[sp1] HNL5[sp2] Deltah_45) + (HNL4bar[sp1] HNL6[sp2] Deltah_46) 
+            + (HNL5bar[sp1] HNL4[sp2] Deltah_54) + (HNL5bar[sp1] HNL5[sp2] Deltah_55) + (HNL5bar[sp1] HNL6[sp2] Deltah_56) 
+            + (HNL6bar[sp1] HNL4[sp2] Deltah_64) + (HNL6bar[sp1] HNL5[sp2] Deltah_65) + (HNL6bar[sp1] HNL6[sp2] Deltah_66) 
+            + (DNbar[sp1] HNL4[sp2] Deltah_4DN) + (DNbar[sp1] HNL5[sp2] Deltah_5DN) + (DNbar[sp1] HNL6[sp2] Deltah_6DN) ) 
+            * (H cos(thetascalar) + S0 sin(thetascalar))       (* NEUTRINO SCALAR VERTICIES higgs *)
+
+
+
+
+            - ( (HNL4bar[sp1] HNL4[sp2] Deltaphi_44 ) + (HNL4bar[sp1] HNL5[sp2] Deltaphi_45 ) + (HNL4bar[sp1] HNL6[sp2] Deltaphi_46 ) 
+            + (HNL5bar[sp1] HNL4[sp2] Deltaphi_54 ) + (HNL5bar[sp1] HNL5[sp2] Deltaphi_55 ) + (HNL5bar[sp1] HNL6[sp2] Deltaphi_56 ) 
+            + (HNL6bar[sp1] HNL4[sp2] Deltaphi_64 ) + (HNL6bar[sp1] HNL5[sp2] Deltaphi_65 ) + (HNL6bar[sp1] HNL6[sp2] Deltaphi_66 ) 
+            + (DNbar[sp1] HNL4[sp2] Deltaphi_DN4 ) + (DNbar[sp1] HNL5[sp2] Deltaphi_DN5 ) + (DNbar[sp1] HNL6[sp2] Deltaphi_DN6 )  ) 
+            * (S0 cos(thetascalar) - H sin(thetascalar))          (* NEUTRINO SCALAR VERTICIES dark scalar *)
