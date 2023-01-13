@@ -86,7 +86,7 @@ M$GaugeGroups = {
     Representations   -> {T,Colour}, 
     SymmetricTensor   -> dSUN
   } 
-};
+};                                               (* DO WE NEED TO ADD A NEW GAUGE GROUP???  *)
 
 (* ************************** *)
 (* *****    Indices     ***** *)
@@ -432,7 +432,7 @@ M$ClassesDescription = {
     FullName         -> {"~fermion 6"}
   },                                                 (*   >>>>>   HERE! Nico  <<<<<   *)
  F[11] == {
-    ClassName        -> nu3,                 (* This is the active neutrino of the model with mass=0.05 eV, is not majorana *)
+    ClassName        -> nu3,                 (* This is the active neutrino of the model with mass=0.05 eV, is not Majorana *)
     SelfConjugate    -> True,
     Mass             -> {mnu3, 500},
     Width            -> {wnu3, 0},
@@ -981,7 +981,12 @@ c66 == {
 
 
 
-
+ Deltah_43 == {
+    ParameterType    -> Internal, 
+    BlockName        -> NP,
+    Value            -> (1/Sqrt[2])* U_nu3HNL4 *(Sqrt[2]*mnu3/vevscal)* U_nu3HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Description      -> "Deltah_43"
+  },
   Deltah_44 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
@@ -1000,6 +1005,12 @@ c66 == {
     Value            -> (1/Sqrt[2])* U_nu3HNL4 *(Sqrt[2]*mnu3/vevscal)* U_HNL4HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_46"
   },
+ Deltah_53 == {
+    ParameterType    -> Internal, 
+    BlockName        -> NP,
+    Value            -> (1/Sqrt[2])* U_nu3HNL5 *(Sqrt[2]*mnu3/vevscal)* U_nu3HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Description      -> "Deltah_53"
+  },
   Deltah_54 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
@@ -1017,6 +1028,12 @@ c66 == {
     BlockName        -> NP,
     Value            -> (1/Sqrt[2])* U_nu3HNL5 *(Sqrt[2]*mnu3/vevscal)* U_HNL5HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_56"
+  },
+ Deltah_63 == {
+    ParameterType    -> Internal, 
+    BlockName        -> NP,
+    Value            -> (1/Sqrt[2])* U_nu3HNL6 *(Sqrt[2]*mnu3/vevscal)* U_nu3HNL6 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Description      -> "Deltah_63"
   },
   Deltah_64 == {
     ParameterType    -> Internal, 
@@ -1056,6 +1073,25 @@ c66 == {
   },
 
 
+
+  Deltaphi_34 == {
+    ParameterType    -> Internal, 
+    BlockName        -> NP,
+    Value            -> (2/Sqrt[2])* U_nu3HNL4 *(Sqrt[2]*mDN/vevscal)* U_DNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
+    Description      -> "Deltaphi_34"
+  },
+  Deltaphi_35 == {
+    ParameterType    -> Internal, 
+    BlockName        -> NP,
+    Value            -> (2/Sqrt[2])* U_nu3HNL5 *(Sqrt[2]*mDN/vevscal)* U_DNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
+    Description      -> "Deltaphi_35"
+  },
+  Deltaphi_36 == {
+    ParameterType    -> Internal, 
+    BlockName        -> NP,
+    Value            -> (2/Sqrt[2])* U_nu3HNL6 *(Sqrt[2]*mDN/vevscal)* U_DNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Description      -> "Deltaphi_36"
+  },
   Deltaphi_44 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
@@ -1437,16 +1473,12 @@ ExpandIndices[ LGhs + If[FeynmanGauge, LGh1 + LGhw + LGhphi,0], FlavorExpand->SU
 
 
 
-            - ( (HNL4bar[sp1] HNL4[sp2] Deltah_44) + (HNL4bar[sp1] HNL5[sp2] Deltah_45) + (HNL4bar[sp1] HNL6[sp2] Deltah_46) + (HNL5bar[sp1] HNL4[sp2] Deltah_54) + (HNL5bar[sp1] HNL5[sp2] Deltah_55) + (HNL5bar[sp1] HNL6[sp2] Deltah_56) + (HNL6bar[sp1] HNL4[sp2] Deltah_64) + (HNL6bar[sp1] HNL5[sp2] Deltah_65) + (HNL6bar[sp1] HNL6[sp2] Deltah_66) + (DNbar[sp1] HNL4[sp2] Deltah_4DN) + (DNbar[sp1] HNL5[sp2] Deltah_5DN) + (DNbar[sp1] HNL6[sp2] Deltah_6DN) ) * (H cos(thetascalar) + S0 sin(thetascalar))       (* NEUTRINO SCALAR VERTICIES higgs *)
+            - ( (HNL4bar[sp1] nu3[sp2] Deltah_43) + (HNL4bar[sp1] HNL4[sp2] Deltah_44) + (HNL4bar[sp1] HNL5[sp2] Deltah_45) + (HNL4bar[sp1] HNL6[sp2] Deltah_46) + (HNL5bar[sp1] nu3[sp2] Deltah_53) + (HNL5bar[sp1] HNL4[sp2] Deltah_54) + (HNL5bar[sp1] HNL5[sp2] Deltah_55) + (HNL5bar[sp1] HNL6[sp2] Deltah_56) + (HNL6bar[sp1] nu3[sp2] Deltah_63) +(HNL6bar[sp1] HNL4[sp2] Deltah_64) + (HNL6bar[sp1] HNL5[sp2] Deltah_65) + (HNL6bar[sp1] HNL6[sp2] Deltah_66) + (HNL4bar[sp1] DN[sp2] Deltah_4DN) + (HNL5bar[sp1] DN[sp2] Deltah_5DN) + (HNL6bar[sp1] DN[sp2] Deltah_6DN) ) * (H cos(thetascalar) + S0 sin(thetascalar))       (* NEUTRINO SCALAR VERTICIES higgs *)
 
 
 
 
-            - ( (HNL4bar[sp1] HNL4[sp2] Deltaphi_44 ) + (HNL4bar[sp1] HNL5[sp2] Deltaphi_45 ) + (HNL4bar[sp1] HNL6[sp2] Deltaphi_46 ) + (HNL5bar[sp1] HNL4[sp2] Deltaphi_54 ) + (HNL5bar[sp1] HNL5[sp2] Deltaphi_55 ) + (HNL5bar[sp1] HNL6[sp2] Deltaphi_56 ) + (HNL6bar[sp1] HNL4[sp2] Deltaphi_64 ) + (HNL6bar[sp1] HNL5[sp2] Deltaphi_65 ) + (HNL6bar[sp1] HNL6[sp2] Deltaphi_66 ) + (DNbar[sp1] HNL4[sp2] Deltaphi_DN4 ) + (DNbar[sp1] HNL5[sp2] Deltaphi_DN5 ) + (DNbar[sp1] HNL6[sp2] Deltaphi_DN6 )  ) * (S0 cos(thetascalar) - H sin(thetascalar))          (* NEUTRINO SCALAR VERTICIES dark scalar *)
-
-           
-
-
+            - ( (nu3bar[sp1] HNL4[sp2] Deltaphi_34 ) + (nu3bar[sp1] HNL5[sp2] Deltaphi_35 ) + (nu3bar[sp1] HNL6[sp2] Deltaphi_36 ) + (HNL4bar[sp1] HNL4[sp2] Deltaphi_44 ) + (HNL4bar[sp1] HNL5[sp2] Deltaphi_45 ) + (HNL4bar[sp1] HNL6[sp2] Deltaphi_46 ) + (HNL5bar[sp1] HNL4[sp2] Deltaphi_54 ) + (HNL5bar[sp1] HNL5[sp2] Deltaphi_55 ) + (HNL5bar[sp1] HNL6[sp2] Deltaphi_56 ) + (HNL6bar[sp1] HNL4[sp2] Deltaphi_64 ) + (HNL6bar[sp1] HNL5[sp2] Deltaphi_65 ) + (HNL6bar[sp1] HNL6[sp2] Deltaphi_66 ) + (DNbar[sp1] HNL4[sp2] Deltaphi_DN4 ) + (DNbar[sp1] HNL5[sp2] Deltaphi_DN5 ) + (DNbar[sp1] HNL6[sp2] Deltaphi_DN6 )  ) * (S0 cos(thetascalar) - H sin(thetascalar))          (* NEUTRINO SCALAR VERTICIES dark scalar *)
 
 
            
