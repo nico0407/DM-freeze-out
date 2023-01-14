@@ -984,91 +984,91 @@ c66 == {
  Deltah43 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* Unu3HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* Unu3HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_43"
   },
   Deltah44 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UHNL4HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UHNL4HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_44"
   },
   Deltah45 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UHNL4HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UHNL4HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_45"
   },
   Deltah46 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UHNL4HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UHNL4HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_46"
   },
  Deltah53 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* Unu3HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* Unu3HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_53"
   },
   Deltah54 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* UHNL5HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* UHNL5HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_54"
   },
   Deltah55 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* UHNL5HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* UHNL5HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_55"
   },
   Deltah56 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* UHNL5HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL5 *(Sqrt[2]*mnu3/vevscal)* UHNL5HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_56"
   },
  Deltah63 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* Unu3HNL6 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* Unu3HNL6 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_63"
   },
   Deltah64 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* UHNL6HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* UHNL6HNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_64"
   },
   Deltah65 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* UHNL6HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* UHNL6HNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_65"
   },
   Deltah66 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* UHNL6HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL6 *(Sqrt[2]*mnu3/vevscal)* UHNL6HNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_66"
   },
   Deltah4DN == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UDNHNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UDNHNL4 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_4DN"
   },
   Deltah5DN == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UDNHNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UDNHNL5 ,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_5DN"
   },
   Deltah6DN == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/(2*Sqrt[2]))* Unu3HNL4 *(Sqrt[2]*mnu3/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltah_6DN"
   },
 
@@ -1077,91 +1077,91 @@ c66 == {
   Deltaphi34 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* Unu3HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_34"
   },
   Deltaphi35 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* Unu3HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* Unu3HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_35"
   },
   Deltaphi36 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* Unu3HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* Unu3HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_36"
   },
   Deltaphi44 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL4HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL4HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_44"
   },
   Deltaphi45 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL4HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL4HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_45"
   },
   Deltaphi46 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL4HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL4HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_46"
   },
  Deltaphi54 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL5HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL5HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_54"
   },
   Deltaphi55 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL5HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL5HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_55"
   },
   Deltaphi56 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL5HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL5HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_66"
   },
  Deltaphi64 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL6HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL6HNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_44"
   },
   Deltaphi65 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL6HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL6HNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_65"
   },
   Deltaphi66 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UHNL6HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UHNL6HNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_66"
   },
  DeltaphiDN4 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UDNHNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UDNHNL4 *(Sqrt[2]*mDN/vevscal)* UDNHNL4,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_DN4"
   },
   DeltaphiDN5 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UDNHNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UDNHNL5 *(Sqrt[2]*mDN/vevscal)* UDNHNL5,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_DN5"
   },
   DeltaphiDN6 == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (2/Sqrt[2])* UDNHNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
+    Value            -> (1/Sqrt[2])* UDNHNL6 *(Sqrt[2]*mDN/vevscal)* UDNHNL6,   (* There should be an other term, but for L-R symmetry is zero *)
     Description      -> "Deltaphi_DN6"
   },
 
@@ -1206,7 +1206,7 @@ c66 == {
     Value            -> Cos[1/2 ArcTan[2sw0*schi*cchi/(cchi^2-schi^2*sw0^2-mu2)]],
     Description      -> "cos_beta"
   },
-  csbeta == {
+  sbeta == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
     Value            -> Sin[1/2 ArcTan[2sw0*schi*cchi/(cchi^2-schi^2*sw0^2-mu2)]],
@@ -1240,12 +1240,6 @@ c66 == {
     BlockName        -> NP,
     Value            -> (1/2)* ArcTan[tthetascalar],
     Description      -> "theta_scalar"
-  },                                                                                  (*   >>>>>   HERE! Nico  <<<<<   *)
-  Deltaphi == {
-    ParameterType    -> Internal, 
-    BlockName        -> NP,
-    Value            -> (1/2*Sqrt[2])* (2*UN*(YL*UDLR + UDLR*YL)),
-    Description      -> "Delta_phi"
   },                                                                                  (*   >>>>>   HERE! Nico  <<<<<   *)
 
 
@@ -1496,8 +1490,20 @@ ExpandIndices[ LGhs + If[FeynmanGauge, LGh1 + LGhw + LGhphi,0], FlavorExpand->SU
            - ( (HNL4bar[sp1] nu3[sp1] Deltah43) + (HNL4bar[sp1] HNL4[sp1] Deltah44) + (HNL4bar[sp1] HNL5[sp1] Deltah45) + (HNL4bar[sp1] HNL6[sp1] Deltah46) 
                 + (HNL5bar[sp1] nu3[sp1] Deltah53) + (HNL5bar[sp1] HNL4[sp1] Deltah54) + (HNL5bar[sp1] HNL5[sp1] Deltah55) + (HNL5bar[sp1] HNL6[sp1] Deltah56) 
                 + (HNL6bar[sp1] nu3[sp1] Deltah63) + (HNL6bar[sp1] HNL4[sp1] Deltah64) + (HNL6bar[sp1] HNL5[sp1] Deltah65) + (HNL6bar[sp1] HNL6[sp1] Deltah66) 
-                + (HNL4bar[sp1] DN[sp1] Deltah4DN) + (HNL5bar[sp1] DN[sp1] Deltah5DN) + (HNL6bar[sp1] DN[sp1] Deltah6DN)  ) * (H cos(thetascalar) + S0 sin(thetascalar))      
+                + (HNL4bar[sp1] DN[sp1] Deltah4DN) + (HNL5bar[sp1] DN[sp1] Deltah5DN) + (HNL6bar[sp1] DN[sp1] Deltah6DN)        ) * (H cos(thetascalar) + S0 sin(thetascalar))    
+  
+                                           (* i=4,5,6   j=3,4,5,6,DN, so is a 3x5         i: initial state,   j: final state *)
                                            (* NEUTRINO SCALAR VERTICIES higgs *)
+
+
+           - ( (nu3bar[sp1] HNL4[sp1] Deltah43) + (nu3bar[sp1] HNL5[sp1] Deltah53) + (nu3bar[sp1] HNL6[sp1] Deltah63) 
+                + (HNL4bar[sp1] HNL4[sp1] Deltah44) + (HNL4bar[sp1] HNL5[sp1] Deltah45) + (HNL4bar[sp1] HNL6[sp1] Deltah46) 
+                + (HNL5bar[sp1] HNL4[sp1] Deltah54) + (HNL5bar[sp1] HNL5[sp1] Deltah55) + (HNL5bar[sp1] HNL6[sp1] Deltah56)
+                + (HNL6bar[sp1] HNL4[sp1] Deltah64) + (HNL6bar[sp1] HNL5[sp1] Deltah65) + (HNL6bar[sp1] HNL6[sp1] Deltah66)
+                + (DNbar[sp1] HNL4[sp1] Deltah4DN) + (DNbar[sp1] HNL5[sp1] Deltah5DN) + (DNbar[sp1] HNL6[sp1] Deltah6DN)    ) * (H cos(thetascalar) + S0 sin(thetascalar)) 
+
+                                             (* i=3,4,5,6,DN   j=4,5,6 so is a 5x3   i: initial state,   j: final state   *)
+                                             (* NEUTRINO SCALAR VERTICIES higgs (Hermitian conjugate of above) *)
 
                               ]
                 ];
@@ -1513,8 +1519,21 @@ ExpandIndices[ LGhs + If[FeynmanGauge, LGh1 + LGhw + LGhphi,0], FlavorExpand->SU
                 + (HNL4bar[sp1] HNL4[sp1] Deltaphi44 ) + (HNL4bar[sp1] HNL5[sp1] Deltaphi45 ) + (HNL4bar[sp1] HNL6[sp1] Deltaphi46 ) 
                 + (HNL5bar[sp1] HNL4[sp1] Deltaphi54 ) + (HNL5bar[sp1] HNL5[sp1] Deltaphi55 ) + (HNL5bar[sp1] HNL6[sp1] Deltaphi56 ) 
                 + (HNL6bar[sp1] HNL4[sp1] Deltaphi64 ) + (HNL6bar[sp1] HNL5[sp1] Deltaphi65 ) + (HNL6bar[sp1] HNL6[sp1] Deltaphi66 ) 
-                + (DNbar[sp1] HNL4[sp1] DeltaphiDN4 ) + (DNbar[sp1] HNL5[sp1] DeltaphiDN5 ) + (DNbar[sp1] HNL6[sp1] DeltaphiDN6 )  ) * (S0 cos(thetascalar) - H sin(thetascalar))         
+                + (DNbar[sp1] HNL4[sp1] DeltaphiDN4 ) + (DNbar[sp1] HNL5[sp1] DeltaphiDN5 ) + (DNbar[sp1] HNL6[sp1] DeltaphiDN6 )  ) * (S0 cos(thetascalar) - H sin(thetascalar))  
+
+                                     (* i=3,4,5,6,DN   j=4,5,6 so is a 5x3         i: initial state,   j: final state *)
                                      (* NEUTRINO SCALAR VERTICIES dark scalar *)
+
+
+           - ( (HNL4bar[sp1] nu3[sp1] Deltaphi34 ) + (HNL4bar[sp1] HNL4[sp1] Deltaphi44 ) + (HNL4bar[sp1] HNL5[sp1] Deltaphi45 ) + (HNL4bar[sp1] HNL6[sp1] Deltaphi46 ) 
+                + (HNL5bar[sp1] nu3[sp1] Deltaphi35 ) + (HNL5bar[sp1] HNL4[sp1] Deltaphi54 ) + (HNL5bar[sp1] HNL5[sp1] Deltaphi55 ) + (HNL5bar[sp1] HNL6[sp1] Deltaphi56 ) 
+                + (HNL6bar[sp1] nu3[sp1] Deltaphi36 ) + (HNL6bar[sp1] HNL4[sp1] Deltaphi64 ) + (HNL6bar[sp1] HNL5[sp1] Deltaph655 ) + (HNL6bar[sp1] HNL6[sp1] Deltaphi66 ) 
+                + (HNL4bar[sp1] DN[sp1] DeltaphiDN4 ) + (HNL5bar[sp1] DN[sp1] DeltaphiDN5 ) + (HNL6bar[sp1] DN[sp1] DeltaphiDN6 )  ) * (S0 cos(thetascalar) - H sin(thetascalar)) 
+
+                                     (* i=4,5,6   j=3,4,5,6,DN, so is a 3x5         i: initial state,   j: final state *)
+                                     (* NEUTRINO SCALAR VERTICIES dark scalar (hermitian conjugate of above )  *)
+
+
 
 
                               ]
@@ -1532,7 +1551,7 @@ ExpandIndices[ LGhs + If[FeynmanGauge, LGh1 + LGhw + LGhphi,0], FlavorExpand->SU
 (* ******************************** *)
 
 
- LNP := LNP0 + LNP1 ;
+ LNP := LNP0 + LNP1 + LNP2 + LNP3 + LNP4 ;
 
  LSM := LGauge + LFermions + LHiggs + LYukawa + LGhost;
 
