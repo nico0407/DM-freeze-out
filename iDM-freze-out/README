@@ -3,3 +3,54 @@ Rmember to update 'quantity' on each iDM relic computation, and to get rid of m1
 quantity=np.sqrt(np.pi*(Mp**2)/45)*m2
 
 iDM freeze-out-integration_unpolarized is the most updated one, and the most complete
+
+
+
+ LNP3  := Block[{mu,sp1},
+                ExpandIndices[
+
+      (*        - ( (nu3bar[sp1] nu3[sp1] Deltah33) + (nu3bar[sp1] HNL4[sp1] Deltah34) + (nu3bar[sp1] HNL5[sp1] Deltah35) + (nu3bar[sp1] HNL6[sp1] Deltah36) + (nu3bar[sp1] DN[sp1] Deltah3DN) 
+                + (HNL4bar[sp1] nu3[sp1] Deltah43) + (HNL4bar[sp1] HNL4[sp1] Deltah44) + (HNL4bar[sp1] HNL5[sp1] Deltah45) + (HNL4bar[sp1] HNL6[sp1] Deltah46) + (HNL4bar[sp1] DN[sp1] Deltah4DN)
+                + (HNL5bar[sp1] nu3[sp1] Deltah53) + (HNL5bar[sp1] HNL4[sp1] Deltah54) + (HNL5bar[sp1] HNL5[sp1] Deltah55) + (HNL5bar[sp1] HNL6[sp1] Deltah56) + (HNL5bar[sp1] DN[sp1] Deltah5DN)
+                + (HNL6bar[sp1] nu3[sp1] Deltah63) + (HNL6bar[sp1] HNL4[sp1] Deltah64) + (HNL6bar[sp1] HNL5[sp1] Deltah65) + (HNL6bar[sp1] HNL6[sp1] Deltah66) + (HNL6bar[sp1] DN[sp1] Deltah6DN)
+                + (DNbar[sp1] nu3[sp1] DeltahDN3) + (DNbar[sp1] HNL4[sp1] DeltahDN4) + (DNbar[sp1] HNL5[sp1] DeltahDN5) + (DNbar[sp1] HNL6[sp1] DeltahDN6) + (DNbar[sp1] DN[sp1] 0)  
+                + HC[  (nu3bar[sp1] HNL4[sp1] Deltah34) + (nu3bar[sp1] HNL5[sp1] Deltah35) + (nu3bar[sp1] HNL6[sp1] Deltah36) + (nu3bar[sp1] DN[sp1] Deltah3DN) 
+                + (HNL4bar[sp1] nu3[sp1] Deltah43) + (HNL4bar[sp1] HNL5[sp1] Deltah45) + (HNL4bar[sp1] HNL6[sp1] Deltah46) + (HNL4bar[sp1] DN[sp1] Deltah4DN)
+                + (HNL5bar[sp1] nu3[sp1] Deltah53) + (HNL5bar[sp1] HNL4[sp1] Deltah54) + (HNL5bar[sp1] HNL6[sp1] Deltah56) + (HNL5bar[sp1] DN[sp1] Deltah5DN)
+                + (HNL6bar[sp1] nu3[sp1] Deltah63) + (HNL6bar[sp1] HNL4[sp1] Deltah64) + (HNL6bar[sp1] HNL5[sp1] Deltah65) + (HNL6bar[sp1] DN[sp1] Deltah6DN)
+                + (DNbar[sp1] nu3[sp1] DeltahDN3) + (DNbar[sp1] HNL4[sp1] DeltahDN4) + (DNbar[sp1] HNL5[sp1] DeltahDN5) + (DNbar[sp1] HNL6[sp1] DeltahDN6) ]
+                              ) * (H Cos[thetascalar] + S0 Sin[thetascalar])                                                                                       *) 
+
+
+
+
+
+
+
+(*
+           - ( (HNL4bar[sp1] nu3[sp1] Deltah43) + (HNL4bar[sp1] HNL4[sp1] Deltah44) + (HNL4bar[sp1] HNL5[sp1] Deltah45) + (HNL4bar[sp1] HNL6[sp1] Deltah46) 
+                + (HNL5bar[sp1] nu3[sp1] Deltah53) + (HNL5bar[sp1] HNL4[sp1] Deltah54) + (HNL5bar[sp1] HNL5[sp1] Deltah55) + (HNL5bar[sp1] HNL6[sp1] Deltah56) 
+                + (HNL6bar[sp1] nu3[sp1] Deltah63) + (HNL6bar[sp1] HNL4[sp1] Deltah64) + (HNL6bar[sp1] HNL5[sp1] Deltah65) + (HNL6bar[sp1] HNL6[sp1] Deltah66) 
+                + (HNL4bar[sp1] DN[sp1] Deltah4DN) + (HNL5bar[sp1] DN[sp1] Deltah5DN) + (HNL6bar[sp1] DN[sp1] Deltah6DN)        ) * (H Cos[thetascalar] + S0 Sin[thetascalar])    
+  
+                                           (* i=4,5,6   j=3,4,5,6,DN, so is a 3x5         i: initial state,   j: final state *)
+                                           (* NEUTRINO SCALAR VERTICIES higgs *)
+
+
+           - ( (nu3bar[sp1] HNL4[sp1] Deltah43) + (nu3bar[sp1] HNL5[sp1] Deltah53) + (nu3bar[sp1] HNL6[sp1] Deltah63) 
+                + (HNL4bar[sp1] HNL4[sp1] Deltah44) + (HNL4bar[sp1] HNL5[sp1] Deltah45) + (HNL4bar[sp1] HNL6[sp1] Deltah46) 
+                + (HNL5bar[sp1] HNL4[sp1] Deltah54) + (HNL5bar[sp1] HNL5[sp1] Deltah55) + (HNL5bar[sp1] HNL6[sp1] Deltah56)
+                + (HNL6bar[sp1] HNL4[sp1] Deltah64) + (HNL6bar[sp1] HNL5[sp1] Deltah65) + (HNL6bar[sp1] HNL6[sp1] Deltah66)
+                + (DNbar[sp1] HNL4[sp1] Deltah4DN) + (DNbar[sp1] HNL5[sp1] Deltah5DN) + (DNbar[sp1] HNL6[sp1] Deltah6DN)    ) * (H Cos[thetascalar] + S0 Sin[thetascalar])               *)
+
+                                             (* i=3,4,5,6,DN   j=4,5,6 so is a 5x3   i: initial state,   j: final state   *)
+                                             (* NEUTRINO SCALAR VERTICIES higgs (Hermitian conjugate of above) *)
+
+
+					(*  IN PRINCIPLE I CAN GET RID OF THE HIGSS TERMS, DUE TO THE FACT THAT THE MIXING ANGLE BETWEEN THE SCALAR IS VERY SMALL  *)
+					(*  this terms do not affect the relic density computation, but technically they should still be part of the model... *)
+              				(*  I CAN JUST KEEP THE SCALAR TERMS WITH THE DARK SCALAR MEDIATOR  *)
+
+
+                              ]
+                ];
