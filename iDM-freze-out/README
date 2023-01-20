@@ -54,3 +54,59 @@ iDM freeze-out-integration_unpolarized is the most updated one, and the most com
 
                               ]
                 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ LNP4  := Block[{mu,sp1},
+                ExpandIndices[
+
+
+
+           - ( (nu3bar[sp1] nu3[sp1] Deltaphi33 ) + (nu3bar[sp1] HNL4[sp1] Deltaphi34 ) + (nu3bar[sp1] HNL5[sp1] Deltaphi35 ) + (nu3bar[sp1] HNL6[sp1] Deltaphi36 ) + (nu3bar[sp1] HNL7[sp1] Deltaphi37 ) + (nu3bar[sp1] HNL8[sp1] Deltaphi38 ) 
+                + (HNL4bar[sp1] nu3[sp1] Deltaphi43 ) + (HNL4bar[sp1] HNL4[sp1] Deltaphi44 ) + (HNL4bar[sp1] HNL5[sp1] Deltaphi45 ) + (HNL4bar[sp1] HNL6[sp1] Deltaphi46 ) + (HNL4bar[sp1] HNL7[sp1] Deltaphi47 ) + (HNL4bar[sp1] HNL8[sp1] Deltaphi48 )
+                + (HNL5bar[sp1] nu3[sp1] Deltaphi53 ) + (HNL5bar[sp1] HNL4[sp1] Deltaphi54 ) + (HNL5bar[sp1] HNL5[sp1] Deltaphi55 ) + (HNL5bar[sp1] HNL6[sp1] Deltaphi56 ) + (HNL5bar[sp1] HNL7[sp1] Deltaphi57 ) + (HNL5bar[sp1] HNL8[sp1] Deltaphi58 )
+                + (HNL6bar[sp1] nu3[sp1] Deltaphi63 ) + (HNL6bar[sp1] HNL4[sp1] Deltaphi64 ) + (HNL6bar[sp1] HNL5[sp1] Deltaphi65 ) + (HNL6bar[sp1] HNL6[sp1] Deltaphi66 ) + (HNL6bar[sp1] HNL7[sp1] Deltaphi67 ) + (HNL6bar[sp1] HNL8[sp1] Deltaphi68 )
+                + (HNL7bar[sp1] nu3[sp1] Deltaphi73 ) + (HNL7bar[sp1] HNL4[sp1] Deltaphi74 ) + (HNL7bar[sp1] HNL5[sp1] Deltaphi75 ) + (HNL7bar[sp1] HNL6[sp1] Deltaphi76 ) + (HNL7bar[sp1] HNL7[sp1] Deltaphi77 ) + (HNL7bar[sp1] HNL8[sp1] Deltaphi78 ) 
+                + (HNL8bar[sp1] nu3[sp1] Deltaphi83 ) + (HNL8bar[sp1] HNL4[sp1] Deltaphi84 ) + (HNL8bar[sp1] HNL5[sp1] Deltaphi85 ) + (HNL8bar[sp1] HNL6[sp1] Deltaphi86 ) + (HNL8bar[sp1] HNL7[sp1] Deltaphi87 ) + (HNL8bar[sp1] HNL8[sp1] Deltaphi88 )
+
+                + HC[ (nu3bar[sp1] nu3[sp1] Deltaphi33 ) + (nu3bar[sp1] HNL4[sp1] Deltaphi34 ) + (nu3bar[sp1] HNL5[sp1] Deltaphi35 ) + (nu3bar[sp1] HNL6[sp1] Deltaphi36 ) + (nu3bar[sp1] HNL7[sp1] Deltaphi37 ) + (nu3bar[sp1] HNL8[sp1] Deltaphi38 ) 
+                + (HNL4bar[sp1] nu3[sp1] Deltaphi43 ) + (HNL4bar[sp1] HNL4[sp1] Deltaphi44 ) + (HNL4bar[sp1] HNL5[sp1] Deltaphi45 ) + (HNL4bar[sp1] HNL6[sp1] Deltaphi46 ) + (HNL4bar[sp1] HNL7[sp1] Deltaphi47 ) + (HNL4bar[sp1] HNL8[sp1] Deltaphi48 )
+                + (HNL5bar[sp1] nu3[sp1] Deltaphi53 ) + (HNL5bar[sp1] HNL4[sp1] Deltaphi54 ) + (HNL5bar[sp1] HNL5[sp1] Deltaphi55 ) + (HNL5bar[sp1] HNL6[sp1] Deltaphi56 ) + (HNL5bar[sp1] HNL7[sp1] Deltaphi57 ) + (HNL5bar[sp1] HNL8[sp1] Deltaphi58 )
+                + (HNL6bar[sp1] nu3[sp1] Deltaphi63 ) + (HNL6bar[sp1] HNL4[sp1] Deltaphi64 ) + (HNL6bar[sp1] HNL5[sp1] Deltaphi65 ) + (HNL6bar[sp1] HNL6[sp1] Deltaphi66 ) + (HNL6bar[sp1] HNL7[sp1] Deltaphi67 ) + (HNL6bar[sp1] HNL8[sp1] Deltaphi68 )
+                + (HNL7bar[sp1] nu3[sp1] Deltaphi73 ) + (HNL7bar[sp1] HNL4[sp1] Deltaphi74 ) + (HNL7bar[sp1] HNL5[sp1] Deltaphi75 ) + (HNL7bar[sp1] HNL6[sp1] Deltaphi76 ) + (HNL7bar[sp1] HNL7[sp1] Deltaphi77 ) + (HNL7bar[sp1] HNL8[sp1] Deltaphi78 ) 
+                + (HNL8bar[sp1] nu3[sp1] Deltaphi83 ) + (HNL8bar[sp1] HNL4[sp1] Deltaphi84 ) + (HNL8bar[sp1] HNL5[sp1] Deltaphi85 ) + (HNL8bar[sp1] HNL6[sp1] Deltaphi86 ) + (HNL8bar[sp1] HNL7[sp1] Deltaphi87 ) + (HNL8bar[sp1] HNL8[sp1] Deltaphi88 ) ] )  * (S0 Cos[thetascalar] - H Sin[thetascalar])  
+
+                        
+
+                                     (* i=3,4,5,6,DN   j=4,5,6 so is a 5x3         i: initial state,   j: final state *)
+                                     (* NEUTRINO SCALAR VERTICIES dark scalar *)
+
+
+
+
+
+
+(*           - ( (HNL4bar[sp1] nu3[sp1] Deltaphi34 ) + (HNL4bar[sp1] HNL4[sp1] Deltaphi44 ) + (HNL4bar[sp1] HNL5[sp1] Deltaphi45 ) + (HNL4bar[sp1] HNL6[sp1] Deltaphi46 ) 
+                + (HNL5bar[sp1] nu3[sp1] Deltaphi35 ) + (HNL5bar[sp1] HNL4[sp1] Deltaphi54 ) + (HNL5bar[sp1] HNL5[sp1] Deltaphi55 ) + (HNL5bar[sp1] HNL6[sp1] Deltaphi56 ) 
+                + (HNL6bar[sp1] nu3[sp1] Deltaphi36 ) + (HNL6bar[sp1] HNL4[sp1] Deltaphi64 ) + (HNL6bar[sp1] HNL5[sp1] Deltaph655 ) + (HNL6bar[sp1] HNL6[sp1] Deltaphi66 ) 
+                + (HNL4bar[sp1] DN[sp1] DeltaphiDN4 ) + (HNL5bar[sp1] DN[sp1] DeltaphiDN5 ) + (HNL6bar[sp1] DN[sp1] DeltaphiDN6 )  ) * (S0 Cos[thetascalar] - H Sin[thetascalar])    *)
+
+                                     (* i=4,5,6   j=3,4,5,6,DN, so is a 3x5         i: initial state,   j: final state *)
+                                     (* NEUTRINO SCALAR VERTICIES dark scalar (hermitian conjugate of above )  *)
+
+
+
+
+                              ]
+                ];
