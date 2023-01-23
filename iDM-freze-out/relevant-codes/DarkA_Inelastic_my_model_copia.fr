@@ -724,29 +724,28 @@ M$Parameters = {
     ParameterType    -> External, 
     BlockName        -> NP,
     Value            -> 0.1,
-    Description      -> "epsilon_dark"
+    Description      -> "epsilon dark"
   },                                      (*   >>>>>   HERE! Nico (Probably we should go back to Gordan's model)   <<<<<   *)
 
 
 
-  vevscal == {
+ vevscal == {
     ParameterType    -> External, 
     BlockName        -> NP,
     Value            -> 0.1,
-    Description      -> "vev_scalar"
+    Description      -> "vev scalar"
   },                                                (*   >>>>>   HERE! Nico   <<<<<   *)
- vevhiggsss == {
+ vevhi == {
     ParameterType    -> External, 
     BlockName        -> NP,
-    Value            -> 246,
-    Description      -> "vev_higgsss"
+    Value            -> 246.0,
+    Description      -> "vev higgsss"
   },                                                (*   >>>>>   HERE! Nico   <<<<<   *)
  lambdaphih == {
     ParameterType    -> External, 
     BlockName        -> NP,
     Value            -> 0.1,
-    InteractionOrder -> {QNP,1},
-    Description      -> "Lambda_phi_h"
+    Description      -> "Lambda phi h"
   },                                                (*   >>>>>   HERE! Nico  <<<<<   *)
 
 
@@ -1853,13 +1852,13 @@ d88 == {
  chi == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> epsilondark/cW0,
+    Value            -> epsilondark/cw0,
     Description      -> "chi"
   },
  schi == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> Sin[epsilondark/cW0],
+    Value            -> Sin[epsilondark/cw0],
     Description      -> "sen chi"
   },
  mu2 == {
@@ -1871,13 +1870,13 @@ d88 == {
  cchi == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> Cos[epsilondark/cW0],                         (*    Sqrt[1-schi^2],  *)
+    Value            -> Cos[epsilondark/cw0],                         (*    Sqrt[1-schi^2],  *)
     Description      -> "cos_chi"
   },
  tchi == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> Tan[epsilondark/cW0],                          (*  schi/Sqrt[1-schi^2],   *)
+    Value            -> Tan[epsilondark/cw0],                          (*  schi/Sqrt[1-schi^2],   *)
     Description      -> "tan_chi"
   },
  cbeta == {
@@ -1903,6 +1902,7 @@ d88 == {
     Value            -> Sqrt[2]*mX1/vevscal ,
     Description      -> "Y^chi"
   }, 
+
 (*                                                                                 (*   >>>>>   HERE! Nico  <<<<<   *)
  YL == {
     ParameterType    -> Internal, 
@@ -1912,20 +1912,25 @@ d88 == {
   },                                                                                   (*   >>>>>   HERE! Nico  <<<<<   *)
                     *)
 
- tan2thetascalar == {
+
+ tanangle == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> (lambdaphih*vevscal*vevhiggsss)/(mS0^2 - MH^2),
-    Description      -> "tannnthetascalar"
+    Value            -> lambdaphih*vevscal*vevhi/(mS0^2-MH^2),
+    Description      -> "tann nthetascal"
   },                                                                                  (*   >>>>>   HERE! Nico  <<<<<   *)
 
  thetascalar == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
-    Value            -> 0.5 ArcTan[(lambdaphih*vevscal*vevhiggsss)/(mS0^2 - MH^2)], (* 0.5 ArcTan[tan2thetascalar] *)
+    Value            -> 1/2 ArcTan[tanangle], (* 0.5 ArcTan[tan2thetascalar] *)
     Description      -> "thetascalar"
   },                                                                                  (*   >>>>>   HERE! Nico  <<<<<   *)
 
+
+
+
+(*
  dVe == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
@@ -1939,7 +1944,7 @@ d88 == {
     Value            -> -gw0/(2cw0)(cbeta*sw0*tchi-Sqrt[1-cbeta^2])/2,
     Description      -> "dA_electron"
   },
-
+        *)
 
   aEW == {
     ParameterType    -> Internal,
@@ -2261,7 +2266,7 @@ ExpandIndices[ LGhs + If[FeynmanGauge, LGh1 + LGhw + LGhphi,0], FlavorExpand->SU
                 + (HNL5bar[sp1] nu3[sp1] Deltaphi53 ) + (HNL5bar[sp1] HNL4[sp1] Deltaphi54 ) + (HNL5bar[sp1] HNL5[sp1] Deltaphi55 ) + (HNL5bar[sp1] HNL6[sp1] Deltaphi56 ) + (HNL5bar[sp1] HNL7[sp1] Deltaphi57 ) + (HNL5bar[sp1] HNL8[sp1] Deltaphi58 )
                 + (HNL6bar[sp1] nu3[sp1] Deltaphi63 ) + (HNL6bar[sp1] HNL4[sp1] Deltaphi64 ) + (HNL6bar[sp1] HNL5[sp1] Deltaphi65 ) + (HNL6bar[sp1] HNL6[sp1] Deltaphi66 ) + (HNL6bar[sp1] HNL7[sp1] Deltaphi67 ) + (HNL6bar[sp1] HNL8[sp1] Deltaphi68 )
                 + (HNL7bar[sp1] nu3[sp1] Deltaphi73 ) + (HNL7bar[sp1] HNL4[sp1] Deltaphi74 ) + (HNL7bar[sp1] HNL5[sp1] Deltaphi75 ) + (HNL7bar[sp1] HNL6[sp1] Deltaphi76 ) + (HNL7bar[sp1] HNL7[sp1] Deltaphi77 ) + (HNL7bar[sp1] HNL8[sp1] Deltaphi78 ) 
-                + (HNL8bar[sp1] nu3[sp1] Deltaphi83 ) + (HNL8bar[sp1] HNL4[sp1] Deltaphi84 ) + (HNL8bar[sp1] HNL5[sp1] Deltaphi85 ) + (HNL8bar[sp1] HNL6[sp1] Deltaphi86 ) + (HNL8bar[sp1] HNL7[sp1] Deltaphi87 ) + (HNL8bar[sp1] HNL8[sp1] Deltaphi88 ) ] )  * (S0 Cos[thetascalar] - H Sin[thetascalar])  
+                + (HNL8bar[sp1] nu3[sp1] Deltaphi83 ) + (HNL8bar[sp1] HNL4[sp1] Deltaphi84 ) + (HNL8bar[sp1] HNL5[sp1] Deltaphi85 ) + (HNL8bar[sp1] HNL6[sp1] Deltaphi86 ) + (HNL8bar[sp1] HNL7[sp1] Deltaphi87 ) + (HNL8bar[sp1] HNL8[sp1] Deltaphi88 ) ] )    * (S0 Cos[thetascalar] - H Sin[thetascalar])  
 
                         
 
