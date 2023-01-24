@@ -18,6 +18,7 @@ Copy the iDM.....unpolarized file and change masses of DM particles. Change the 
 The code with all the model is working now. You just have to add the tilda to the Dark Matter candidates, not to every new particle.
 At first the xf was 33.5 and the Omega was 10e-7. The relevant processes were just the ones involving the chi1 scalar going into HNL4,5,6. 
 So I thought that the scalar cross section was fucked up, in particular the coupling which was "Y^chi" and at the beginnig was an internal parameter defined as:
+
  Ychi == {
  
     ParameterType    -> Internal, 
@@ -38,7 +39,8 @@ Probably the scalar iDM interaction needs to be checked again. Now also the inel
 
 # How to use Micromegas
 First you need to write down your new model into a script that already has the Standard Model framework as a background. You can add new physical bosons and scalars and new particles, both majorana or dirac ones. The particles that should be dark matter has to have the tilda on the name, like follows:
-  F[5] == {                               
+ 
+ F[5] == {                               
   
     ClassName        -> X1,
     
@@ -65,22 +67,39 @@ First you need to write down your new model into a script that already has the S
   }, 
   
   If it's Majorana the self conjugate has to be True, and the Propagator arrow "None", is Dirac those things has t o be respectively False and "Forward" as in the definition of the quarks that follows
+  
     F[3] == {
+    
     ClassName        -> uq,
+    
     ClassMembers     -> {u, c, t},
+    
     Indices          -> {Index[Generation], Index[Colour]},
+    
     FlavorIndex      -> Generation,
+    
     SelfConjugate    -> False,
+    
     Mass             -> {Mu, {MU, 2.55*^-3}, {MC,1.27}, {MT,172}},
+    
     Width            -> {0, 0, {WT,1.50833649}},
+    
     QuantumNumbers   -> {Q -> 2/3},
+    
     PropagatorLabel  -> {"uq", "u", "c", "t"},
+    
     PropagatorType   -> Straight,
+    
     PropagatorArrow  -> Forward,
+    
     PDG              -> {2, 4, 6}, 
+    
     ParticleName     -> {"u",  "c",  "t" },
+    
     AntiParticleName -> {"u~", "c~", "t~"},
+    
     FullName         -> {"u-quark", "c-quark", "t-quark"}
+    
   },
   
   After the script and the Lagranigian of the new Phuysics is ready you have to create an exegutable for Micromegas. This can be done following the Mathematica notebook "BSM.nb". this one allows to check the all model and if there are any issue and at the end where is written down (Micromegas) it creates 5 files that are necessare to run Micromegas. 
