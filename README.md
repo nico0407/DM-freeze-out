@@ -122,19 +122,15 @@ Then a new file need to be added, called Micro.sh and the main.c need to be exte
 
 Duplicate data.par and call it data0.par
 
-Create an "output.txt" file where Micromega is going to write the Omega result. Now if you run ./main data.par the value is gonna be stored in the output.txt file. But you need to modify the Omega section of main.c adding a piece:
+Create an "output.txt" file where Micromega is going to write the Omega result. Now if you run ./main data.par the value is gonna be stored in the output.txt file. But you need to modify the Omega section of main.c adding the piece:
 
      FILE *infileR;
-     
      infileR = fopen("output.txt","w");
-     
      fprintf(infileR,"%f",Omega);
-     
      fclose(infileR);
-     
      printf("\n ** the relic density has been printed in file \"output.txt\" ** \n");
      
-So that the Omega section of main.c looks like:
+It has to be added specifically so that the Omega section of main.c looks like:
 {
 #ifdef OMEGA
 { int fast=1;
