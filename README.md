@@ -19,10 +19,15 @@ The code with all the model is working now. You just have to add the tilda to th
 At first the xf was 33.5 and the Omega was 10e-7. The relevant processes were just the ones involving the chi1 scalar going into HNL4,5,6. 
 So I thought that the scalar cross section was fucked up, in particular the coupling which was "Y^chi" and at the beginnig was an internal parameter defined as:
  Ychi == {
+ 
     ParameterType    -> Internal, 
+    
     BlockName        -> NP,
+    
     Value            -> Sqrt[2]*mX1/vevscal ,
+    
     Description      -> "Y^chi"
+    
   }, 
   
 But his value has way too high. Therefore I decided to use it as an external paramether to set. and just changing this one to Ychi=0.01 I got xf=25.9 and the Omega=1.89 e-3, still not the best but much better.
@@ -33,19 +38,32 @@ Probably the scalar iDM interaction needs to be checked again. Now also the inel
 
 # How to use Micromegas
 First you need to write down your new model into a script that already has the Standard Model framework as a background. You can add new physical bosons and scalars and new particles, both majorana or dirac ones. The particles that should be dark matter has to have the tilda on the name, like follows:
-  F[5] == {                                                                       (*   >>>>>   HERE!   <<<<<   *)
+  F[5] == {                               
+  
     ClassName        -> X1,
+    
     SelfConjugate    -> True,
+    
     Mass             -> {mX1, 500},
+    
     Width            -> {wX1, 0},
+    
     PropagatorLabel  -> {"X1"},
+    
     PropagatorType   -> Straight,
+    
     PropagatorArrow  -> None,
+    
     PDG              -> {71},
+    
     ParticleName     -> {"~X1"},
+    
     AntiParticleName -> {"~X1bar"},
+    
     FullName         -> {"~fermion 1"}
+    
   }, 
+  
   If it's Majorana the self conjugate has to be True, and the Propagator arrow "None", is Dirac those things has t o be respectively False and "Forward" as in the definition of the quarks that follows
     F[3] == {
     ClassName        -> uq,
