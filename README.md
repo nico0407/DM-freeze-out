@@ -81,4 +81,4 @@ There is also a way to run micromegas as many times as you want for different pa
 
 Then a new file need to be added, called Micro.sh and the main.c need to be extended in producing and saving the relic value in the file as:
 
-END UP TOMORROW
+END UP TOMORROW 
