@@ -1,0 +1,7 @@
+# file to improve default parameters
+
+gX             1.121
+epsilondark     0.00927
+mX0          3.0
+mX1          1.0
+mX2          1.3
