@@ -388,9 +388,9 @@ M$ClassesDescription = {
     PropagatorType   -> Straight,
     PropagatorArrow  -> None,
     PDG              -> {75},                         (*   >>>>>   Because the scalar is 73!   <<<<<   *)
-    ParticleName     -> {"~HNL4"},
-    AntiParticleName -> {"~HNL4bar"},
-    FullName         -> {"~fermion 4"}
+    ParticleName     -> {"HNL4"},
+    AntiParticleName -> {"HNL4bar"},
+    FullName         -> {"fermion 4"}
   },                                                 (*   >>>>>   HERE! Nico  <<<<<   *)
  F[8] == {
     ClassName        -> HNL5,
@@ -401,9 +401,9 @@ M$ClassesDescription = {
     PropagatorType   -> Straight,
     PropagatorArrow  -> None,
     PDG              -> {76},                         (*   >>>>>   Because the scalar is 73!   <<<<<   *)
-    ParticleName     -> {"~HNL5"},
-    AntiParticleName -> {"~HNL5bar"},
-    FullName         -> {"~fermion 5"}
+    ParticleName     -> {"HNL5"},
+    AntiParticleName -> {"HNL5bar"},
+    FullName         -> {"fermion 5"}
   },                                                 (*   >>>>>   HERE! Nico  <<<<<   *)
  F[9] == {
     ClassName        -> HNL6,
@@ -414,9 +414,9 @@ M$ClassesDescription = {
     PropagatorType   -> Straight,
     PropagatorArrow  -> None,                         (* HNL are Majorana *)
     PDG              -> {77},                         (*   >>>>>   Because the scalar is 73!   <<<<<   *)
-    ParticleName     -> {"~HNL6"},
-    AntiParticleName -> {"~HNL6bar"},
-    FullName         -> {"~fermion 6"}
+    ParticleName     -> {"HNL6"},
+    AntiParticleName -> {"HNL6bar"},
+    FullName         -> {"fermion 6"}
   },                                                 (*   >>>>>   HERE! Nico  <<<<<   *)
  F[10] == {
     ClassName        -> nu3,                 (* This is the active neutrino of the model with mass=0.05 eV, is not Majorana *)
@@ -427,9 +427,9 @@ M$ClassesDescription = {
     PropagatorType   -> Straight,
     PropagatorArrow  -> Forward,                         (* nu3 is not majorana Majorana *)
     PDG              -> {78},                         (*   >>>>>   Because the scalar is 73!   <<<<<   *)
-    ParticleName     -> {"~nu3"},
-    AntiParticleName -> {"~nu3bar"},
-    FullName         -> {"~fermion 3"}
+    ParticleName     -> {"nu3"},
+    AntiParticleName -> {"nu3bar"},
+    FullName         -> {"fermion 3"}
   },                                                 (*   >>>>>   HERE! Nico  <<<<<   *)
  F[16] == {
     ClassName        -> HNL7,
@@ -440,9 +440,9 @@ M$ClassesDescription = {
     PropagatorType   -> Straight,
     PropagatorArrow  -> None,                         (* HNL are Majorana *)
     PDG              -> {79},                         (*   >>>>>   Because the scalar is 73!   <<<<<   *)
-    ParticleName     -> {"~HNL7"},
-    AntiParticleName -> {"~HNL7bar"},
-    FullName         -> {"~fermion 7"}
+    ParticleName     -> {"HNL7"},
+    AntiParticleName -> {"HNL7bar"},
+    FullName         -> {"fermion 7"}
   }, 
  F[17] == {
     ClassName        -> HNL8,
@@ -453,9 +453,9 @@ M$ClassesDescription = {
     PropagatorType   -> Straight,
     PropagatorArrow  -> None,                         (* HNL are Majorana *)
     PDG              -> {80},                         (*   >>>>>   Because the scalar is 73!   <<<<<   *)
-    ParticleName     -> {"~HNL8"},
-    AntiParticleName -> {"~HNL8bar"},
-    FullName         -> {"~fermion 8"}
+    ParticleName     -> {"HNL8"},
+    AntiParticleName -> {"HNL8bar"},
+    FullName         -> {"fermion 8"}
   },   
 
 
@@ -985,7 +985,12 @@ M$Parameters = {
     Value            -> 0.1,
     Description      -> "Youkawa3"
   }, 
-
+ Ychi == {
+    ParameterType    -> External, 
+    BlockName        -> NP,
+    Value            -> 0.1,
+    Description      -> "Y^chi"
+  }, 
 
 
 
@@ -1895,13 +1900,15 @@ d88 == {
 (*    I HAVE WRITTEN SIN(CHI) AS CHI IN FUNCTION OF EPSILONDARK. SO SCHI IS NOT ANYMORE AN EXTERNAL PARAMETER BUT AN INTERNAL, AND DUE TO THE SMALL MIXING IS JUST CHI, THE ARGUMENT, ANYWAY I HAVE ANYWAY DECLARES A SCHI, JUST FOR THE TANGENT OF 2BETHA.....           *)
 
 
-
+(*
  Ychi == {
     ParameterType    -> Internal, 
     BlockName        -> NP,
     Value            -> Sqrt[2]*mX1/vevscal ,
     Description      -> "Y^chi"
   }, 
+
+                     *)
 
 (*                                                                                 (*   >>>>>   HERE! Nico  <<<<<   *)
  YL == {
