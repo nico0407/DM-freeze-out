@@ -118,4 +118,12 @@ There is also a way to run micromegas as many times as you want for different pa
 
 Then a new file need to be added, called Micro.sh and the main.c need to be extended in producing and saving the relic value in the file as:
 
-END UP TOMORROW 
+# How to write the relic density result in the file and run it many times
+
+Duplicate data.par and call it data0.par
+
+Create an "output.txt" file where Micromega is going to write the Omega result. Now if you run ./main data.par the value is gonna be stored in the output.txt file
+
+To run Micromega more times create other text file called "data_in", "data_out". First in data0.par assign all the fixed values to the parameters and for the values call them with different names such as "xxx", "yyy"... 
+
+Then in data_in you just need to assign as many values you want to the variables you need. Use the Micro.sh file and modify it accordingly to how many variables you have. and then you are good to run the command "sh Micro.sh" .
