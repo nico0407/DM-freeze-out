@@ -15,3 +15,15 @@ Copy the iDM.....unpolarized file and change masses of DM particles. Change the 
 
 
 # Important
+The code with all the model is working now. You just have to add the tilda to the Dark Matter candidates, not to every new particle.
+At first the xf was 33.5 and the Omega was 10e-7. The relevant processes were just the ones involving the chi1 scalar going into HNL4,5,6. 
+So I thought that the scalar cross section was fucked up, in particular the coupling which was "Y^chi" and at the beginnig was an internal parameter defined as:
+ Ychi == {
+    ParameterType    -> Internal, 
+    BlockName        -> NP,
+    Value            -> Sqrt[2]*mX1/vevscal ,
+    Description      -> "Y^chi"
+  }, 
+  
+But his value has way too high. Therefore I decided to use it as an external paramether to set. and just changing this one to Ychi=0.01 I got xf=25.9 and the Omega=1.89 e-3, still not the best but much better.
+Probably the scalar iDM interaction needs to be checked again. Now also the inelastic current channel that sees the coannihilation of chi1 and chi2 into e+e- and mu+mu- are back.
