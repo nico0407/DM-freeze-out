@@ -122,7 +122,76 @@ Then a new file need to be added, called Micro.sh and the main.c need to be exte
 
 Duplicate data.par and call it data0.par
 
-Create an "output.txt" file where Micromega is going to write the Omega result. Now if you run ./main data.par the value is gonna be stored in the output.txt file
+Create an "output.txt" file where Micromega is going to write the Omega result. Now if you run ./main data.par the value is gonna be stored in the output.txt file. But you need to modify the Omega section of main.c adding a piece:
+
+     FILE *infileR;
+     
+     infileR = fopen("output.txt","w");
+     
+     fprintf(infileR,"%f",Omega);
+     
+     fclose(infileR);
+     
+     printf("\n ** the relic density has been printed in file \"output.txt\" ** \n");
+     
+So that the Omega section of main.c looks like:
+
+#ifdef OMEGA
+{ int fast=1;
+  double Beps=1.E-4, cut=0.01;
+  double Omega;  
+  int i,err; 
+  printf("\n==== Calculation of relic density =====\n");   
+
+  if(CDM1 && CDM2) 
+  {
+  
+    Omega= darkOmega2(fast,Beps,&err);
+
+/*
+  displayPlot("vs11","T",Tend,Tstart,0,5
+      ,"vs1100",0,vs1100F,NULL
+      ,"vs1120",0,vs1120F,NULL
+      ,"vs1122",0,vs1122F,NULL
+      ,"vs1110",0,vs1110F,NULL
+      ,"vs1112",0,vs1112F,NULL
+      );
+      
+  displayPlot("vs12","T",Tend,Tstart,0,4
+             ,"vs1210",0,vs1210F,NULL
+             ,"vs1222",0,vs1222F,NULL
+             ,"vs1120",0,vs1120F,NULL
+             ,"vs1211",0,vs1211F,NULL);
+                                
+  displayPlot("vs22","T",Tend,Tstart,0,5
+             ,"vs2200",0,vs2200F,NULL
+             ,"vs2210",0,vs2210F,NULL
+             ,"vs2211",0,vs2211F,NULL
+             ,"vs2220",0,vs2220F,NULL
+             ,"vs2221",0,vs2221F,NULL
+             );
+  displayPlot("dY","T",  Tend,Tstart,0,2,"dY1",0,dY1F,NULL,"dY2",0,dY2F,NULL);
+  displayPlot("Y","T",   Tend,Tstart,0,2,"Y1" ,0,Y1F,NULL,"Y2",0,Y2F,NULL);
+*/                                
+      
+       
+    printf("Omega_1h^2=%.2E Omega_2h^2=%.2E err=%d \n", Omega*(1-fracCDM2), Omega*fracCDM2,err);
+  } else
+  {  double Xf;
+     Omega=darkOmega(&Xf,fast,Beps,&err);
+     printf("Xf=%.2e Omega=%.2e\n",Xf,Omega);
+     if(Omega>0)printChannels(Xf,cut,Beps,1,stdout);
+  }
+     FILE *infileR;
+     infileR = fopen("output.txt","w");
+     fprintf(infileR,"%f",Omega);
+     fclose(infileR);
+     printf("\n ** the relic density has been printed in file \"output.txt\" ** \n");
+}
+
+
+
+
 
 To run Micromega more times create other text file called "data_in", "data_out". First in data0.par assign all the fixed values to the parameters and for the values call them with different names such as "xxx", "yyy"... 
 
