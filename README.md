@@ -135,7 +135,7 @@ Create an "output.txt" file where Micromega is going to write the Omega result. 
      printf("\n ** the relic density has been printed in file \"output.txt\" ** \n");
      
 So that the Omega section of main.c looks like:
-
+{
 #ifdef OMEGA
 { int fast=1;
   double Beps=1.E-4, cut=0.01;
@@ -189,6 +189,7 @@ So that the Omega section of main.c looks like:
      printf("\n ** the relic density has been printed in file \"output.txt\" ** \n");
 }
 
+}
 
 
 
