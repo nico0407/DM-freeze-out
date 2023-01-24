@@ -126,4 +126,6 @@ Create an "output.txt" file where Micromega is going to write the Omega result. 
 
 To run Micromega more times create other text file called "data_in", "data_out". First in data0.par assign all the fixed values to the parameters and for the values call them with different names such as "xxx", "yyy"... 
 
-Then in data_in you just need to assign as many values you want to the variables you need. Use the Micro.sh file and modify it accordingly to how many variables you have. and then you are good to run the command "sh Micro.sh" .
+Then in data_in you just need to assign as many values you want to the variables you need. Use the Micro.sh file and modify it accordingly to how many variables you have. and then you are good to run the command "sh Micro.sh".
+
+I AM UPLOADING AN EXAMPLE DIRECTORY THAT WORKS CALLED "Gordanmodel".
