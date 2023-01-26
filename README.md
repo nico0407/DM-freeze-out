@@ -195,3 +195,11 @@ To run Micromega more times create other text file called "data_in", "data_out".
 Then in data_in you just need to assign as many values you want to the variables you need. Use the Micro.sh file and modify it accordingly to how many variables you have. and then you are good to run the command "sh Micro.sh".
 
 I AM UPLOADING AN EXAMPLE DIRECTORY THAT WORKS CALLED "Gordanmodel".
+
+
+
+
+
+# UPDATE 25.01.2023
+
+Maybe all the internal variables has to go into order of use. So if the external paramether is theta and there is an internal paramether that need cos theta you need to define an other internal paramther that is costeta. 
