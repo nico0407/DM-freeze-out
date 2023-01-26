@@ -203,3 +203,8 @@ I AM UPLOADING AN EXAMPLE DIRECTORY THAT WORKS CALLED "Gordanmodel".
 # UPDATE 25.01.2023
 
 Maybe all the internal variables has to go into order of use. So if the external paramether is theta and there is an internal paramether that need cos theta you need to define an other internal paramther that is costeta. 
+
+
+# UPDATE 26.01.2023
+
+Now the cosine of beta is considered and also, adrons have been added and the things are the same, so probably it wa salready considering them or they do not infuence the things so much.
